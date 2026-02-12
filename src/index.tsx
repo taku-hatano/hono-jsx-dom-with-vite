@@ -1,4 +1,7 @@
 import { Hono } from "hono";
+import { appName } from "virtual:app-config";
+
+console.log("app name:", appName);
 
 const app = new Hono();
 
