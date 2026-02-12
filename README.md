@@ -13,6 +13,10 @@ The plugin works in two phases:
 
 These phases are intentionally separated because extracting route paths is the challenging part. See below for the trade-offs of each approach.
 
+- Optimization plugin: [`optimize/plugin.ts`](./optimize/plugin.ts)
+- Path extraction utilities: [`optimize/paths.ts`](./optimize/paths.ts)
+- Usage example: [`vite.config.ts`](./vite.config.ts)
+
 ## Route path extraction strategies
 
 ### Direct import (`getPathsFromDirectImport`)
