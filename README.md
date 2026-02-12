@@ -34,6 +34,32 @@ Run a separate Vite build to bundle the app entry, then dynamically import the o
 - Requires passing relevant plugins/options from `vite.config.ts` to keep the build consistent
 - Effectively runs the build twice, which may become a concern for larger projects
 
+## Optimization results
+
+Bundle size comparison of `dist/_worker.js` from `vite build` output:
+
+Before optimization:
+
+```
+vite v7.3.1 building ssr environment for production...
+✓ 39 modules transformed.
+dist/_worker.js  26.88 kB
+✓ built in 289ms
+```
+
+After optimization:
+
+```
+vite v7.3.1 building ssr environment for production...
+✓ 33 modules transformed.
+dist/_worker.js  19.71 kB
+✓ built in 236ms
+```
+
+**7.17 kB reduction (26.7%)**
+
+Note: benchmarks have not been conducted yet.
+
 ## Conclusion
 
 Route path extraction could also be done in other project-specific ways, such as:
